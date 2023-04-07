@@ -104,3 +104,15 @@ const observer = new IntersectionObserver(e=>{
 sections.forEach(s=>{
   observer.observe(s)
 })
+
+
+const header = document.querySelector('header')
+addEventListener('scroll', e=>{
+  if(scrollY < 50) {
+    header.style.borderBottom = ''
+    header.style.marginBottom = '0'
+  } else {
+    header.style.borderBottom = '1px solid #429ea629'
+    header.style.marginBottom = '-1px'
+  }
+})
